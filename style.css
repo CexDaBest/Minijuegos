@@ -1,0 +1,84 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  background-color: rgb(241, 240, 255);
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+}
+
+.textcontent {
+  margin: 20px;
+  display: block;
+  padding: 10px;
+  border-radius: 10px;
+  background-image: linear-gradient(to bottom, rgb(149, 222, 255), deepskyblue);
+  box-shadow: 6px 4px 10px rgb(0, 0, 0, 0.5);
+}
+
+.centered {
+  text-align: center;
+}
+
+.justified {
+  text-align: justify;
+}
+
+.section {
+  display: block;
+  background-color: rgb(194, 194, 194);
+  padding: 20px;
+}
+
+/* Quitar la flecha en Firefox */
+details > summary {
+  list-style: none; /* elimina el marcador de lista */
+}
+details > summary::marker {
+  display: none; /* oculta el marcador en Firefox */
+}
+
+
+/* Estilo general del summary */
+.section summary {
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;          /* coloca flecha y texto en línea */
+  align-items: center;    /* centra verticalmente */
+  gap: 8px;               /* espacio entre flecha y texto */
+}
+
+
+/* Flechita personalizada antes del texto */
+.section summary::before {
+  content: "➥"; /* Puedes cambiar por ➕, ▶, ➖, ▼, etc. */
+  font-size: 20px;        /* tamaño grande sin encimar */
+  flex-shrink: 0;         /* evita que se reduzca */
+  transition: transform 0.3s ease
+}
+
+/* Rota la flecha cuando el details está abierto */
+.section[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.section summary {
+  font-weight: bold;
+}
+
+hr {
+  margin: 0;
+  border: none;
+  background-color: rgb(146, 146, 146);
+  height: 2px;
+}
+
+.minigameimg {
+  display: block;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
