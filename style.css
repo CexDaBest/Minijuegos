@@ -127,3 +127,13 @@ hr.nospacing {
   -moz-user-select: none;    /* Firefox */
   -ms-user-select: none;     /* IE10+/Edge */
 }
+
+.link {
+  text-decoration: underline;
+  color: red;
+  font-weight: bold;
+}
+
+.link:hover {
+  color: darkred;
+}
